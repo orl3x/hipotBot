@@ -139,7 +139,7 @@ def openHipot():
     while hipotTestFilesCoords is None:
         hipotTestFilesCoords = pag.locateCenterOnScreen(hipotTestFileFolderPic, confidence=0.95)
         print('Looking for file')
-        pag.scroll(-100)
+        pag.scroll(-500)
     print("File found")
     pag.doubleClick(hipotTestFilesCoords)
 
@@ -148,7 +148,7 @@ def openHipot():
     while hipotFileCoords is None:
         hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.95)
         print("Looking for file")
-        pag.scroll(-50)
+        pag.scroll(-800)
     print("File found")
     findAndClick(modelHipotFile, 2, 0.95, True)
 
