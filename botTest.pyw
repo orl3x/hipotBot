@@ -116,6 +116,7 @@ def mes():
     model = pyperclip.paste()
     model = eval(model.replace('-',''))
     showDesktop()
+    print("Looking for "+str(model))
     return model
 
 
@@ -143,13 +144,13 @@ def openHipot():
     pag.doubleClick(hipotTestFilesCoords)
 
     print(modelHipotFile)
-    hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.94)
+    hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.95)
     while hipotFileCoords is None:
-        hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.94)
+        hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.95)
         print("Looking for file")
-        pag.scroll(-100)
+        pag.scroll(-50)
     print("File found")
-    pag.doubleClick(hipotFileCoords)
+    findAndClick(modelHipotFile, 2, 0.95, True)
 
 
     findAndClick(hipotOkBtnPic, 3, 0.95, False)
