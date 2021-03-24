@@ -143,14 +143,14 @@ def openHipot():
     print("File found")
     pag.doubleClick(hipotTestFilesCoords)
 
-    print(modelHipotFile)
-    hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.95)
+    #print(modelHipotFile)
+    hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.98)
     while hipotFileCoords is None:
-        hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.95)
+        hipotFileCoords = pag.locateCenterOnScreen(modelHipotFile, confidence=0.98)
         print("Looking for file")
         pag.scroll(-800)
-    print("File found")
-    findAndClick(modelHipotFile, 2, 0.95, True)
+    #print("File found")
+    findAndClick(modelHipotFile, 2, 0.98, True)
 
 
     findAndClick(hipotOkBtnPic, 3, 0.95, False)
